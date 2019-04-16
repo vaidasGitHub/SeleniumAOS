@@ -4,6 +4,9 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
 
@@ -13,6 +16,8 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
@@ -26,11 +31,13 @@ public class AOS_Selenium_TestNG {
 	public String username = "loadtest1";
 	
 	@BeforeClass
-	public void setUp() {
+	public void setUp() throws MalformedURLException {
 		
-		webBrowser = new FirefoxDriver();
-		webBrowser.manage().window().maximize();
+		//webBrowser = new FirefoxDriver();
+		//webBrowser.manage().window().maximize();
 		//webBrowser.manage().timeouts().implicitlyWait( 10 , TimeUnit.SECONDS );
+		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+    	webBrowser = new RemoteWebDriver( new URL("http://172.16.40.12:4444/wd/hub"), capabilities );
 		
 	}
 	
