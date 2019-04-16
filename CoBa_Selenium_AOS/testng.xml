@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite_AOS" parallel="none">
+  <test name="AOS_Speaker">
+    <classes>
+      <class name="AdvantageOnlineShop.AOS_TestNG"/>
+      <class name="AdvantageOnlineShop.AOS_Selenium_TestNG"/>
+    </classes>
+  </test> <!-- AOS_Speaker -->
+</suite> <!-- Suite_AOS -->

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="1" failed="1" total="4" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="13358" started-at="2019-04-04T10:58:20Z" finished-at="2019-04-04T10:58:33Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="13358" started-at="2019-04-04T10:58:20Z" finished-at="2019-04-04T10:58:33Z">
+      <class name="AdvantageOnlineShop.AOS_Selenium_TestNG">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:AdvantageOnlineShop.AOS_Selenium_TestNG@5ba23b66]" name="setUp" is-config="true" duration-ms="4674" started-at="2019-04-04T12:58:20Z" finished-at="2019-04-04T12:58:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="step_01_CallWebsite()[pri:0, instance:AdvantageOnlineShop.AOS_Selenium_TestNG@5ba23b66]" name="step_01_CallWebsite" duration-ms="7234" started-at="2019-04-04T12:58:24Z" finished-at="2019-04-04T12:58:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- step_01_CallWebsite -->
+        <test-method status="PASS" signature="step_02_SelectLogin()[pri:0, instance:AdvantageOnlineShop.AOS_Selenium_TestNG@5ba23b66]" name="step_02_SelectLogin" duration-ms="292" started-at="2019-04-04T12:58:32Z" depends-on-methods="AdvantageOnlineShop.AOS_Selenium_TestNG.step_01_CallWebsite" finished-at="2019-04-04T12:58:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- step_02_SelectLogin -->
+        <test-method status="FAIL" signature="step_03_PerformLogin()[pri:0, instance:AdvantageOnlineShop.AOS_Selenium_TestNG@5ba23b66]" name="step_03_PerformLogin" duration-ms="205" started-at="2019-04-04T12:58:32Z" depends-on-methods="AdvantageOnlineShop.AOS_Selenium_TestNG.step_02_SelectLogin" finished-at="2019-04-04T12:58:32Z">
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
+            <message>
+              <![CDATA[Element <button id="sign_in_btnundefined" class="sec-sender-a ng-scope" type="button"> could not be scrolled into view
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'P0106-WIN10-VS', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\vsieber-adm\AppData\Local\Temp\rust_mozprofile.tLdE8VJv8Ui1, rotatable=false, moz:geckodriverVersion=0.24.0, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, moz:headless=false, platform=ANY, moz:accessibilityChecks=false, moz:useNonSpecCompliantPointerOrigin=false, acceptInsecureCerts=false, browserVersion=66.0.2, moz:shutdownTimeout=60000.0, platformVersion=10.0, moz:processID=384.0, browserName=firefox, javascriptEnabled=true, platformName=windows, setWindowRect=true, moz:webdriverClick=true}]
+Session ID: 3d22c2a6-63d9-4e26-8e28-240e21ca634e]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: Element <button id="sign_in_btnundefined" class="sec-sender-a ng-scope" type="button"> could not be scrolled into view
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'P0106-WIN10-VS', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\vsieber-adm\AppData\Local\Temp\rust_mozprofile.tLdE8VJv8Ui1, rotatable=false, moz:geckodriverVersion=0.24.0, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, moz:headless=false, platform=ANY, moz:accessibilityChecks=false, moz:useNonSpecCompliantPointerOrigin=false, acceptInsecureCerts=false, browserVersion=66.0.2, moz:shutdownTimeout=60000.0, platformVersion=10.0, moz:processID=384.0, browserName=firefox, javascriptEnabled=true, platformName=windows, setWindowRect=true, moz:webdriverClick=true}]
+Session ID: 3d22c2a6-63d9-4e26-8e28-240e21ca634e
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
+	at AdvantageOnlineShop.AOS_Selenium_TestNG.step_03_PerformLogin(AOS_Selenium_TestNG.java:81)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- step_03_PerformLogin -->
+        <test-method status="SKIP" signature="step_04_VerifyLogon()[pri:0, instance:AdvantageOnlineShop.AOS_Selenium_TestNG@5ba23b66]" name="step_04_VerifyLogon" duration-ms="0" started-at="2019-04-04T12:58:32Z" depends-on-methods="AdvantageOnlineShop.AOS_Selenium_TestNG.step_03_PerformLogin" finished-at="2019-04-04T12:58:32Z">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method AOS_Selenium_TestNG.step_04_VerifyLogon()[pri:0, instance:AdvantageOnlineShop.AOS_Selenium_TestNG@5ba23b66] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method AOS_Selenium_TestNG.step_04_VerifyLogon()[pri:0, instance:AdvantageOnlineShop.AOS_Selenium_TestNG@5ba23b66] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1039)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- step_04_VerifyLogon -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:AdvantageOnlineShop.AOS_Selenium_TestNG@5ba23b66]" name="tearDown" is-config="true" duration-ms="935" started-at="2019-04-04T12:58:32Z" finished-at="2019-04-04T12:58:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- AdvantageOnlineShop.AOS_Selenium_TestNG -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
