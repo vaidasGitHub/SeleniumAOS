@@ -2,46 +2,46 @@
 <testng-results skipped="1" failed="1" total="4" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="13204" started-at="2019-04-17T08:08:28Z" finished-at="2019-04-17T08:08:41Z">
+  <suite name="Default suite" duration-ms="12807" started-at="2019-04-17T09:01:08Z" finished-at="2019-04-17T09:01:21Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="13204" started-at="2019-04-17T08:08:28Z" finished-at="2019-04-17T08:08:41Z">
+    <test name="Default test" duration-ms="12807" started-at="2019-04-17T09:01:08Z" finished-at="2019-04-17T09:01:21Z">
       <class name="AdvantageOnlineShop.AOS_Selenium_TestNG">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:AdvantageOnlineShop.AOS_Selenium_TestNG@c818063]" name="setUp" is-config="true" duration-ms="5571" started-at="2019-04-17T10:08:28Z" finished-at="2019-04-17T10:08:34Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:AdvantageOnlineShop.AOS_Selenium_TestNG@5ba23b66]" name="setUp" is-config="true" duration-ms="4234" started-at="2019-04-17T11:01:08Z" finished-at="2019-04-17T11:01:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="step_01_CallWebsite()[pri:0, instance:AdvantageOnlineShop.AOS_Selenium_TestNG@c818063]" name="step_01_CallWebsite" duration-ms="7161" started-at="2019-04-17T10:08:34Z" finished-at="2019-04-17T10:08:41Z">
+        <test-method status="PASS" signature="step_01_CallWebsite()[pri:0, instance:AdvantageOnlineShop.AOS_Selenium_TestNG@5ba23b66]" name="step_01_CallWebsite" duration-ms="8176" started-at="2019-04-17T11:01:12Z" finished-at="2019-04-17T11:01:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- step_01_CallWebsite -->
-        <test-method status="PASS" signature="step_02_SelectLogin()[pri:0, instance:AdvantageOnlineShop.AOS_Selenium_TestNG@c818063]" name="step_02_SelectLogin" duration-ms="125" started-at="2019-04-17T10:08:41Z" depends-on-methods="AdvantageOnlineShop.AOS_Selenium_TestNG.step_01_CallWebsite" finished-at="2019-04-17T10:08:41Z">
+        <test-method status="PASS" signature="step_02_SelectLogin()[pri:0, instance:AdvantageOnlineShop.AOS_Selenium_TestNG@5ba23b66]" name="step_02_SelectLogin" duration-ms="92" started-at="2019-04-17T11:01:20Z" depends-on-methods="AdvantageOnlineShop.AOS_Selenium_TestNG.step_01_CallWebsite" finished-at="2019-04-17T11:01:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- step_02_SelectLogin -->
-        <test-method status="FAIL" signature="step_03_PerformLogin()[pri:0, instance:AdvantageOnlineShop.AOS_Selenium_TestNG@c818063]" name="step_03_PerformLogin" duration-ms="115" started-at="2019-04-17T10:08:41Z" depends-on-methods="AdvantageOnlineShop.AOS_Selenium_TestNG.step_02_SelectLogin" finished-at="2019-04-17T10:08:41Z">
+        <test-method status="FAIL" signature="step_03_PerformLogin()[pri:0, instance:AdvantageOnlineShop.AOS_Selenium_TestNG@5ba23b66]" name="step_03_PerformLogin" duration-ms="90" started-at="2019-04-17T11:01:20Z" depends-on-methods="AdvantageOnlineShop.AOS_Selenium_TestNG.step_02_SelectLogin" finished-at="2019-04-17T11:01:20Z">
           <exception class="org.openqa.selenium.ElementNotInteractableException">
             <message>
               <![CDATA[element not interactable
-  (Session info: chrome=73.0.3683.86)
-  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 3.10.0-957.el7.x86_64 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 65 milliseconds
+  (Session info: chrome=73.0.3683.103)
+  (Driver info: chromedriver=2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 56 milliseconds
 Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
 System info: host: 'P0106-WIN10-VS', ip: '169.254.186.135', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, hasTouchScreen=false, platform=LINUX, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:44293}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72), userDataDir=/tmp/.com.google.Chrome.0gKBEs}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=73.0.3683.86, browserConnectionEnabled=false, proxy=Proxy(), nativeEvents=true, webdriver.remote.sessionid=86a6623e58330baa434ef72c3b3c2c50, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 86a6623e58330baa434ef72c3b3c2c50]]>
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:42308}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1), userDataDir=C:\Users\VSIEBE~1\AppData\Local\Temp\scoped_dir15952_2715}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=73.0.3683.103, browserConnectionEnabled=false, proxy=Proxy(), nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 356e66089f47af18f878f2d4da793c65]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=73.0.3683.86)
-  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 3.10.0-957.el7.x86_64 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 65 milliseconds
+  (Session info: chrome=73.0.3683.103)
+  (Driver info: chromedriver=2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 56 milliseconds
 Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
 System info: host: 'P0106-WIN10-VS', ip: '169.254.186.135', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, hasTouchScreen=false, platform=LINUX, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:44293}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72), userDataDir=/tmp/.com.google.Chrome.0gKBEs}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=73.0.3683.86, browserConnectionEnabled=false, proxy=Proxy(), nativeEvents=true, webdriver.remote.sessionid=86a6623e58330baa434ef72c3b3c2c50, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 86a6623e58330baa434ef72c3b3c2c50
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:42308}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1), userDataDir=C:\Users\VSIEBE~1\AppData\Local\Temp\scoped_dir15952_2715}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=73.0.3683.103, browserConnectionEnabled=false, proxy=Proxy(), nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 356e66089f47af18f878f2d4da793c65
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -51,7 +51,7 @@ Session ID: 86a6623e58330baa434ef72c3b3c2c50
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
 	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
-	at AdvantageOnlineShop.AOS_Selenium_TestNG.step_03_PerformLogin(AOS_Selenium_TestNG.java:76)
+	at AdvantageOnlineShop.AOS_Selenium_TestNG.step_03_PerformLogin(AOS_Selenium_TestNG.java:78)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -82,13 +82,13 @@ Session ID: 86a6623e58330baa434ef72c3b3c2c50
           <reporter-output>
           </reporter-output>
         </test-method> <!-- step_03_PerformLogin -->
-        <test-method status="SKIP" signature="step_04_VerifyLogon()[pri:0, instance:AdvantageOnlineShop.AOS_Selenium_TestNG@c818063]" name="step_04_VerifyLogon" duration-ms="0" started-at="2019-04-17T10:08:41Z" depends-on-methods="AdvantageOnlineShop.AOS_Selenium_TestNG.step_03_PerformLogin" finished-at="2019-04-17T10:08:41Z">
+        <test-method status="SKIP" signature="step_04_VerifyLogon()[pri:0, instance:AdvantageOnlineShop.AOS_Selenium_TestNG@5ba23b66]" name="step_04_VerifyLogon" duration-ms="0" started-at="2019-04-17T11:01:20Z" depends-on-methods="AdvantageOnlineShop.AOS_Selenium_TestNG.step_03_PerformLogin" finished-at="2019-04-17T11:01:20Z">
           <exception class="java.lang.Throwable">
             <message>
-              <![CDATA[Method AOS_Selenium_TestNG.step_04_VerifyLogon()[pri:0, instance:AdvantageOnlineShop.AOS_Selenium_TestNG@c818063] depends on not successfully finished methods]]>
+              <![CDATA[Method AOS_Selenium_TestNG.step_04_VerifyLogon()[pri:0, instance:AdvantageOnlineShop.AOS_Selenium_TestNG@5ba23b66] depends on not successfully finished methods]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method AOS_Selenium_TestNG.step_04_VerifyLogon()[pri:0, instance:AdvantageOnlineShop.AOS_Selenium_TestNG@c818063] depends on not successfully finished methods
+              <![CDATA[java.lang.Throwable: Method AOS_Selenium_TestNG.step_04_VerifyLogon()[pri:0, instance:AdvantageOnlineShop.AOS_Selenium_TestNG@5ba23b66] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1039)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
@@ -112,7 +112,7 @@ Session ID: 86a6623e58330baa434ef72c3b3c2c50
           <reporter-output>
           </reporter-output>
         </test-method> <!-- step_04_VerifyLogon -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:AdvantageOnlineShop.AOS_Selenium_TestNG@c818063]" name="tearDown" is-config="true" duration-ms="204" started-at="2019-04-17T10:08:41Z" finished-at="2019-04-17T10:08:41Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:AdvantageOnlineShop.AOS_Selenium_TestNG@5ba23b66]" name="tearDown" is-config="true" duration-ms="185" started-at="2019-04-17T11:01:20Z" finished-at="2019-04-17T11:01:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

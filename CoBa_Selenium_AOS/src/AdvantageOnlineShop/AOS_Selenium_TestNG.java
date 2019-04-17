@@ -15,6 +15,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -34,7 +35,7 @@ public class AOS_Selenium_TestNG {
 	@BeforeClass
 	public void setUp() throws MalformedURLException {
 		
-		//webBrowser = new FirefoxDriver();
+		//webBrowser = new ChromeDriver();
 		//webBrowser.manage().window().maximize();
 		//webBrowser.manage().timeouts().implicitlyWait( 10 , TimeUnit.SECONDS );
 		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
@@ -65,6 +66,7 @@ public class AOS_Selenium_TestNG {
 	    WebElement webElement_link_login;
 	    webElement_link_login = findWait( webBrowser, By.id( "menuUser" ) );
 	    webElement_link_login.click();
+	    waitForPageLoad( webBrowser );
 	    
 	}
 	
@@ -86,8 +88,8 @@ public class AOS_Selenium_TestNG {
 	    //find element button login
 	    WebElement webElement_button_login;
 	    webElement_button_login = findWait( webBrowser, By.id( "sign_in_btnundefined" ) );
-	    Thread.sleep( 5000 );
 	    waitForClickable( webElement_button_login, 15 );
+	    forLoading( 5 );
 	    webElement_button_login.click();
 	    
 	}
@@ -167,5 +169,18 @@ public class AOS_Selenium_TestNG {
 		WebDriverWait exists = new WebDriverWait( webBrowser, timer );
 		exists.until( ExpectedConditions.refreshed( ExpectedConditions.elementToBeClickable( webElement ) ) );
 	}
+	
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	private void waitUntilCondition( ExpectedCondition condition, String timeoutMessage, int timeout ) {
+        WebDriverWait wait = new WebDriverWait( webBrowser, timeout );
+        wait.withMessage( timeoutMessage );
+        wait.until( condition );
+    }
+	
+	public void forLoading( int timeout ){
+        ExpectedCondition<Object> condition = ExpectedConditions.jsReturnsValue( "return document.readyState==\"complete\";" );
+        String timeoutMessage = "Page didn't load after " + Integer.toString( timeout ) + " seconds.";
+        waitUntilCondition( condition, timeoutMessage, timeout );
+    }
 	
 }
