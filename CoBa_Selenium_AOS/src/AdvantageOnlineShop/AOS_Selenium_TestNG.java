@@ -37,7 +37,7 @@ public class AOS_Selenium_TestNG {
 		//webBrowser.manage().window().maximize();
 		//webBrowser.manage().timeouts().implicitlyWait( 10 , TimeUnit.SECONDS );
 		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
-    	webBrowser = new RemoteWebDriver( new URL("http://172.16.40.12:4444/wd/hub"), capabilities );
+    	webBrowser = new RemoteWebDriver( new URL("http://172.16.40.45:4444/wd/hub"), capabilities );
 		
 	}
 	
