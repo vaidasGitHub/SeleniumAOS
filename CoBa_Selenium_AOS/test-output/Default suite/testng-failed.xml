@@ -6,18 +6,4 @@
       <class name="AdvantageOnlineShop.AOS_Selenium_TestNG"/>
     </classes>
   </test> <!-- Default test -->
-  <test name="Default test(failed)">
-    <classes>
-      <class name="AdvantageOnlineShop.AOS_Selenium_TestNG">
-        <methods>
-          <include name="step_02_SelectLogin"/>
-          <include name="step_04_VerifyLogon"/>
-          <include name="step_03_PerformLogin"/>
-          <include name="tearDown"/>
-          <include name="step_01_CallWebsite"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- AdvantageOnlineShop.AOS_Selenium_TestNG -->
-    </classes>
-  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

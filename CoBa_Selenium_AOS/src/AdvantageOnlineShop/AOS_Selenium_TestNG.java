@@ -31,6 +31,7 @@ public class AOS_Selenium_TestNG {
 	public String baseUri = "http://demo.proficom.de:8020/#/";
 	public String actualTitle;
 	public String username = "loadtest1";
+	public String password = "TtHWILzgyUh1";
 	
 	@BeforeClass
 	public void setUp() throws MalformedURLException {
@@ -53,10 +54,12 @@ public class AOS_Selenium_TestNG {
 		//get landing page title
 	    actualTitle = webBrowser
 	    				.getTitle()
-	    				.trim();
-	    //Assert.assertEquals( actualTitle, "Advantage Shopping" );
+	    				.trim()
+	    				.replace( "\u00a0", "" );
+	    
+	    Assert.assertEquals( actualTitle, "Advantage Shopping" );
 	    System.out.println( "Homepage title is " + actualTitle );
-		
+
 	}
 	
 	@Test(dependsOnMethods = { "step_01_CallWebsite" })
@@ -65,6 +68,7 @@ public class AOS_Selenium_TestNG {
 		//find element link login
 	    WebElement webElement_link_login;
 	    webElement_link_login = findWait( webBrowser, By.id( "menuUser" ) );
+	    waitForClickable( webElement_link_login, 15 );
 	    webElement_link_login.click();
 	    
 	}
@@ -72,20 +76,20 @@ public class AOS_Selenium_TestNG {
 	@Test(dependsOnMethods = { "step_02_SelectLogin" })
 	public void step_03_PerformLogin() throws InterruptedException {
 	    
-		waitForPageLoad( webBrowser );
-		forLoading( 5 );
 	    //find element input field username
 	    WebElement webElement_input_username;
 	    webElement_input_username = findWait( webBrowser, By.name( "username" ) );
+	    waitForClickable( webElement_input_username, 15 );
 	    webElement_input_username.sendKeys( username );
 	    
 	    //find element input field password
 	    WebElement webElement_input_password;
-	    webElement_input_password = findWait( webBrowser, By.name( "password" ) );      
-	    String password = "TtHWILzgyUh1";
+	    webElement_input_password = findWait( webBrowser, By.name( "password" ) );
+	    waitForClickable( webElement_input_password, 15 );
+	    webElement_input_password.click();
+	    webElement_input_password.clear();
 	    webElement_input_password.sendKeys( password );
-	    
-	    waitForPageLoad( webBrowser );
+
 	    //find element button login
 	    WebElement webElement_button_login;
 	    webElement_button_login = findWait( webBrowser, By.id( "sign_in_btnundefined" ) );
@@ -97,6 +101,7 @@ public class AOS_Selenium_TestNG {
 	@Test(dependsOnMethods = { "step_03_PerformLogin" })
 	public void step_04_VerifyLogon() {
 	    
+		waitForPageLoad( webBrowser );
 		//find login verification element
 		String loggedin_user;
 	    WebElement webElement_label_loggedin;
@@ -107,6 +112,7 @@ public class AOS_Selenium_TestNG {
 	    					.trim();
 	    
 	    Assert.assertEquals( loggedin_user ,  username );
+	    System.out.println( "You are logged in as " + loggedin_user );
 	    
 	}
 	
@@ -169,18 +175,5 @@ public class AOS_Selenium_TestNG {
 		WebDriverWait exists = new WebDriverWait( webBrowser, timer );
 		exists.until( ExpectedConditions.refreshed( ExpectedConditions.elementToBeClickable( webElement ) ) );
 	}
-	
-	@SuppressWarnings({ "rawtypes", "unchecked" })
-	private void waitUntilCondition( ExpectedCondition condition, String timeoutMessage, int timeout ) {
-        WebDriverWait wait = new WebDriverWait( webBrowser, timeout );
-        wait.withMessage( timeoutMessage );
-        wait.until( condition );
-    }
-	
-	public void forLoading( int timeout ){
-        ExpectedCondition<Object> condition = ExpectedConditions.jsReturnsValue( "return document.readyState==\"complete\";" );
-        String timeoutMessage = "Page didn't load after " + Integer.toString( timeout ) + " seconds.";
-        waitUntilCondition( condition, timeoutMessage, timeout );
-    }
 	
 }
