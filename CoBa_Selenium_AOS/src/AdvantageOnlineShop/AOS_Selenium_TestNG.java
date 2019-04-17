@@ -66,13 +66,14 @@ public class AOS_Selenium_TestNG {
 	    WebElement webElement_link_login;
 	    webElement_link_login = findWait( webBrowser, By.id( "menuUser" ) );
 	    webElement_link_login.click();
-	    waitForPageLoad( webBrowser );
 	    
 	}
 	
 	@Test(dependsOnMethods = { "step_02_SelectLogin" })
 	public void step_03_PerformLogin() throws InterruptedException {
 	    
+		waitForPageLoad( webBrowser );
+		forLoading( 5 );
 	    //find element input field username
 	    WebElement webElement_input_username;
 	    webElement_input_username = findWait( webBrowser, By.name( "username" ) );
@@ -89,7 +90,6 @@ public class AOS_Selenium_TestNG {
 	    WebElement webElement_button_login;
 	    webElement_button_login = findWait( webBrowser, By.id( "sign_in_btnundefined" ) );
 	    waitForClickable( webElement_button_login, 15 );
-	    forLoading( 5 );
 	    webElement_button_login.click();
 	    
 	}
