@@ -19,6 +19,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -85,6 +86,7 @@ public class AOS_Selenium_TestNG {
 	    //find element button login
 	    WebElement webElement_button_login;
 	    webElement_button_login = findWait( webBrowser, By.id( "sign_in_btnundefined" ) );
+	    waitForClickable( webElement_button_login, 15 );
 	    webElement_button_login.click();
 	    
 	}
@@ -159,4 +161,10 @@ public class AOS_Selenium_TestNG {
 		};
 		return wait.until( jQueryLoad ) && wait.until( jsLoad ) && wait.until( angularLoad );
 	}
+	
+	public void waitForClickable( WebElement webElement, int timer ) {
+		WebDriverWait exists = new WebDriverWait( webBrowser, timer );
+		exists.until( ExpectedConditions.refreshed( ExpectedConditions.elementToBeClickable( webElement ) ) );
+	}
+	
 }
